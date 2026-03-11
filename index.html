@@ -10,7 +10,7 @@
 body{
 background:#ffd1dc;
 text-align:center;
-font-family:Arial;
+font-family:Arial, sans-serif;
 margin:0;
 padding:0;
 }
@@ -19,35 +19,8 @@ h1{
 margin-top:80px;
 }
 
-.gallery{
-margin-top:40px;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:40px;
-}
-
-.gallery img{
-width:260px;
-border-radi<!DOCTYPE html>
-
-<html>
-
-<head>
-<title>For You ❤️</title>
-
-<style>
-
-body{
-background:#ffd1dc;
-text-align:center;
-font-family:Arial;
-margin:0;
-padding:0;
-}
-
-h1{
-margin-top:80px;
+p{
+font-size:18px;
 }
 
 .gallery{
@@ -67,10 +40,20 @@ box-shadow:0 6px 15px rgba(0,0,0,0.2);
 button{
 padding:15px 30px;
 font-size:18px;
-border-radius:10px;
+border-radius:12px;
 border:none;
 cursor:pointer;
 margin:20px;
+background:#ff4d6d;
+color:white;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+transition:0.2s;
+}
+
+button:hover{
+background:#ff3355;
+transform:scale(1.05);
 }
 
 #runaway{
@@ -88,32 +71,50 @@ position:relative;
 
 <div class="gallery">
 
+<div>
 <img src="WhatsApp Image 2026-03-12 at 01.53.35.jpeg">
+<p>Your quote for this photo</p>
+</div>
+
+<div>
 <img src="WhatsApp Image 2026-03-12 at 01.53.35 (1).jpeg">
+<p>Your quote for this photo</p>
+</div>
+
+<div>
 <img src="WhatsApp Image 2026-03-12 at 01.53.35 (2).jpeg">
+<p>Your quote for this photo</p>
+</div>
+
+<div>
 <img src="WhatsApp Image 2026-03-12 at 01.53.35 (3).jpeg">
+<p>Your quote for this photo</p>
+</div>
 
 </div>
 
-<button onclick="alert('Thank you ❤️')">
+<button id="runaway" onclick="alert('Thank you ❤️')">
 Sorry
 </button>
 
-button{
-padding:15px 30px;
-font-size:18px;
-border-radius:12px;
-border:none;
-cursor:pointer;
-margin:20px;
-background:#ff4d6d;
-color:white;
-font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-transition:0.2s;
-}
+<button>
+Not Sorry
+</button>
 
-button:hover{
-background:#ff3355;
-transform:scale(1.05);
-}
+<script>
+
+let btn = document.getElementById("runaway");
+
+btn.addEventListener("mouseover", function(){
+
+let x = Math.random()*120 - 60;
+let y = Math.random()*60 - 30;
+
+btn.style.transform = "translate("+x+"px,"+y+"px)";
+
+});
+
+</script>
+
+</body>
+</html>
