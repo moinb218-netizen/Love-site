@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+
+<style>
+body{
+background:#ffd1dc;
+text-align:center;
+font-family:Arial;
+}
+
+h1{
+margin-top:120px;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border-radius:10px;
+border:none;
+cursor:pointer;
+margin:20px;
+}
+
+#runaway{
+position:absolute;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>This website is only for you ❤️</h1>
+<p>I made this just to make you smile.</p>
+
+<button onclick="alert('You are special ❤️')">
+Click Me
+</button>
+
+<button id="runaway">
+Don't Touch
+</button>
+
+<script>
+
+let btn = document.getElementById("runaway");
+
+btn.addEventListener("mouseover", function(){
+
+let x = Math.random()*window.innerWidth;
+let y = Math.random()*window.innerHeight;
+
+btn.style.left = x + "px";
+btn.style.top = y + "px";
+
+});
+
+</script>
+
+</body>
+</html>
