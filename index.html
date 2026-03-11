@@ -43,7 +43,7 @@ margin:20px;
 }
 
 #runaway{
-position:absolute;
+position:relative;
 }
 
 </style>
@@ -58,21 +58,18 @@ position:absolute;
 <div class="gallery">
 
 <img src="WhatsApp Image 2026-03-12 at 01.53.35.jpeg">
-
 <img src="WhatsApp Image 2026-03-12 at 01.53.35 (1).jpeg">
-
 <img src="WhatsApp Image 2026-03-12 at 01.53.35 (2).jpeg">
-
 <img src="WhatsApp Image 2026-03-12 at 01.53.35 (3).jpeg">
 
 </div>
 
-<button onclick="alert('You are special ❤️')">
-Click Me
+<button onclick="alert('Thank you ❤️')">
+Sorry
 </button>
 
 <button id="runaway">
-Don't Touch
+Not Sorry
 </button>
 
 <script>
@@ -81,11 +78,10 @@ let btn = document.getElementById("runaway");
 
 btn.addEventListener("mouseover", function(){
 
-let x = Math.random()*window.innerWidth;
-let y = Math.random()*window.innerHeight;
+let x = Math.random()*120 - 60;
+let y = Math.random()*60 - 30;
 
-btn.style.left = x + "px";
-btn.style.top = y + "px";
+btn.style.transform = "translate("+x+"px,"+y+"px)";
 
 });
 
@@ -93,3 +89,4 @@ btn.style.top = y + "px";
 
 </body>
 </html>
+
