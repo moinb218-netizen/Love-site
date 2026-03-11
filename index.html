@@ -110,6 +110,18 @@ Not Sorry
 
 let btn = document.getElementById("runaway");
 
+function moveButton(){
+
+let x = Math.random() * (window.innerWidth - 120);
+let y = Math.random() * (window.innerHeight - 120);
+
+btn.style.position = "absolute";
+btn.style.left = x + "px";
+btn.style.top = y + "px";
+
+}
+
+// desktop (mouse)
 document.addEventListener("mousemove", function(e){
 
 let rect = btn.getBoundingClientRect();
@@ -118,16 +130,15 @@ let distanceX = Math.abs(e.clientX - rect.left);
 let distanceY = Math.abs(e.clientY - rect.top);
 
 if(distanceX < 120 && distanceY < 120){
-
-let x = Math.random() * (window.innerWidth - 100);
-let y = Math.random() * (window.innerHeight - 100);
-
-btn.style.position = "absolute";
-btn.style.left = x + "px";
-btn.style.top = y + "px";
-
+moveButton();
 }
 
+});
+
+// mobile (touch)
+btn.addEventListener("touchstart", function(e){
+e.preventDefault();
+moveButton();
 });
 
 </script>
