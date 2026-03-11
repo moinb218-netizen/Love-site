@@ -89,8 +89,10 @@ transform:scale(1.05);
 
 <div>
 <img src="WhatsApp Image 2026-03-12 at 01.53.35 (3).jpeg">
-<p>Drunk us 😂,  for sure everytime i am gonna drink alcohol the first thing which will get in my head will be you, 
-  and i am sure me and you both of us will move on with much of trouble and be good friends forever as we were during internship,
+<p>Drunk us 😂,  for sure everytime i am gonna drink alcohol 
+  the first thing which will get in my head will be you, 
+  and i am sure me and you both of us will move on 
+  with much of trouble and be good friends forever as we were during internship,
   We had fight you can say sorry here below bubyeee!!</p>
 </div>
 
@@ -108,18 +110,24 @@ Not Sorry
 
 let btn = document.getElementById("runaway");
 
-btn.addEventListener("mouseover", function(){
+document.addEventListener("mousemove", function(e){
 
-let x = Math.random() * window.innerWidth - 200;
-let y = Math.random() * window.innerHeight - 200;
+let rect = btn.getBoundingClientRect();
+
+let distanceX = Math.abs(e.clientX - rect.left);
+let distanceY = Math.abs(e.clientY - rect.top);
+
+if(distanceX < 120 && distanceY < 120){
+
+let x = Math.random() * (window.innerWidth - 100);
+let y = Math.random() * (window.innerHeight - 100);
 
 btn.style.position = "absolute";
 btn.style.left = x + "px";
 btn.style.top = y + "px";
 
+}
+
 });
 
 </script>
-
-</body>
-</html>
